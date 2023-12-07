@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Order summary card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Red+Hat+Display:wght@300;400;500;600;700&display=swap');
+    .attribution { font-size: 11px; text-align: center; margin-top: 10px; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    *{
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+    }
+
+    body {
+      background-image: url(/order-summary-component-main/images/pattern-background-desktop.svg);
+      font-size: 16px;
+      padding: 25px;
+      background-size: cover;
+    }
+
+    .container {
+      background-color: white;
+      width: 350px;
+      margin: auto;
+      height: 550px;
+      border-radius: 10px;
+    }
+
+/* Order Summary div */
+
+    .div-os {
+      padding: 30px;
+    }
+
+    .image img {
+      border-radius: 10px 10px 0 0;
+      max-width: 350px;
+    }
+
+    .div-os h1 {
+      font-family: 'Red Hat Display', sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      color: hsl(223, 47%, 23%);
+      max-width: 350px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .div-os p {
+      font-family: 'Open Sans', sans-serif;
+      color: hsl(224, 23%, 55%);
+      max-width: 350px;
+      text-align: center;
+      font-size: 14px;
+      margin: auto;
+      padding-top: 15px;
+    }
+
+/* Order Summary div */
+
+/* Annual Plan div */
+
+    .div-ap {
+      background-color: hsl(225, 100%, 98%);
+      width: 250px;
+      height: 75px;
+      margin: auto;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+
+    .div-ap-plan {
+      display: block;
+      position: absolute;
+      padding-left: 65px;
+    }
+
+    .div-ap h2 {
+      font-size: 16px;
+      font-family: 'Red Hat Display', sans-serif;
+    }
+
+    .div-ap p {
+      font-size: 16px;
+      color: hsl(224, 23%, 55%);
+    }
+
+    .div-ap a {
+      color: hsl(245, 75%, 52%);
+      font-weight: bold;
+      text-decoration: underline;
+      font-size: 16px;
+    }
+
+    .div-ap a:hover {
+      color: hsla(245, 75%, 52%, 0.589);
+      cursor: pointer;
+    }
+
+/* Annual Plan div */
+
+/* Button div + Cancel Order */
+
+    .div-button {
+      display: flex;
+      flex-direction: column;
+      padding: 30px;
+    }
+
+    .div-button button {
+      width: 300px;
+      height: 45px;
+      border-radius: 10px;
+      border: none;
+      align-self: center;
+      background-color: hsl(245, 75%, 52%);
+      color: white;
+      font-family: 'Red Hat Display', sans-serif;
+      font-weight: bold;
+    }
+
+    .div-button button:hover {
+      background-color: hsla(245, 75%, 52%, 0.589);
+      cursor: pointer;
+      box-shadow: 0 10px hsla(245, 75%, 52%, 0.047) ;
+    }
+
+    .div-button a {
+      margin-top: 20px;
+      color: hsl(224, 23%, 55%);
+      font-weight: bold;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .div-button a:hover {
+      color: black;
+      cursor: pointer;
+    }
+
+/* Button div + Cancel Order */
+
+/* Responsiveness for smaller screens */
+
+    @media screen and (max-width: 400px) {
+      body {
+        background-image: url(/order-summary-component-main/images/pattern-background-mobile.svg);
+        background-size: cover;
+      }
+
+      .container {
+        max-width: 300px;
+      }
+
+      .div-button button {
+        max-width: 250px;
+      }
+
+      .div-ap {
+        max-width: 200px;
+      }
+
+      .div-ap-plan {
+        margin-left: -10px;
+      }
+
+      .div-ap-plan h2 {
+        font-size: 14px;
+      }
+
+      .div-ap a {
+        font-size: 12px;
+      }
+
+      .div-ap-plan p {
+        font-size: 12px;
+      }
+
+      .image img {
+        max-width: 300px;
+      }
+    }
+
+    @media screen and (max-width: 350px) {
+      .container {
+        max-width: 250px;
+        height: 425px;
+      }
+
+      .div-button {
+        margin-top: -15px;
+      }
+
+      .div-button button {
+        max-width: 200px;
+        height: 30px;
+        font-size: 10px;
+      }
+
+      .div-ap {
+        max-width: 150px;
+        height: 50px;
+      }
+
+      .div-os h1 {
+        font-size: 16px;
+      }
+
+      .div-os p {
+        font-size: 12px;
+      }
+
+      .div-ap-plan {
+        margin-left: -30px;
+      }
+
+      .div-ap-plan h2 {
+        font-size: 12px;
+      }
+
+      .div-ap-plan p {
+        font-size: 10px;
+      }
+
+      .image img {
+        max-width: 250px;
+      }
+
+      .div-ap img {
+        width: 40px;
+        margin-left: -10px;
+      }
+
+      .div-ap-link a {
+        font-size: 8px;
+      }
+    }
+  
+/* Responsive for smaller devices */
+  </style>
+</head>
+<body>
+  <section>
+    <div class="container">
+      <div class="image">
+        <img src="/order-summary-component-main/images/illustration-hero.svg">
+      </div>
+      <div class="div-os">
+        <h1>Order Summary</h1>
+        <p>You can now listen to millions of songs, audiobooks, and podcasts on any 
+      device anywhere you like!</p>
+      </div>
+      <div class="div-ap">
+        <img src="/order-summary-component-main/images/icon-music.svg">
+        <div class="div-ap-plan">
+          <h2>Annual Plan</h2>
+          <p>$59.99/year</p>
+        </div>
+        <div class="div-ap-link">
+          <a>Change</a>
+        </div>
+      </div>
+      <div class="div-button">
+        <button>Proceed to Payment</button>
+        <a>Cancel Order</a>
+      </div>
+    </div>
+  </section>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Cairo Garbelotto</a>.
+  </div>
+</body>
+</html>
